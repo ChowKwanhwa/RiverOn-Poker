@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, Mail, Clock, ShieldCheck, Car, BedDouble, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ShieldCheck, Car, BedDouble, Send, ArrowUpRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 const fadeInUp: Variants = {
@@ -188,17 +188,11 @@ export function GameInfoSection() {
 
 export function ContactSection() {
     return (
-        <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-zinc-900 relative overflow-hidden">
+        <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-zinc-900 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={staggerContainer}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
                     {/* Brand Info */}
-                    <motion.div variants={fadeInUp} className="space-y-6">
+                    <div className="space-y-6">
                         <h3 className="font-serif text-3xl font-bold text-white tracking-tight">RiverOn <span className="text-[#D4AF37]">Poker</span></h3>
                         <div className="flex items-start gap-4 text-zinc-400 group cursor-pointer hover:text-white transition-colors">
                             <MapPin className="flex-shrink-0 text-[#D4AF37] mt-1" />
@@ -208,10 +202,10 @@ export function ContactSection() {
                                 Bangkok 10110, Thailand
                             </p>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Contact Links */}
-                    <motion.div variants={fadeInUp} className="space-y-6">
+                    <div className="space-y-6">
                         <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">Connect</h4>
                         <div className="space-y-4">
                             <a href="#" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
@@ -223,10 +217,10 @@ export function ContactSection() {
                                 <span>@RiverOn (Coming Soon)</span>
                             </a>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Hours */}
-                    <motion.div variants={fadeInUp} className="space-y-6">
+                    <div className="space-y-6">
                         <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">Hours</h4>
                         <div className="flex items-start gap-4 text-zinc-400">
                             <div className="w-10 h-10 rounded bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37]"><Clock size={20} /></div>
@@ -235,28 +229,63 @@ export function ContactSection() {
                                 <p className="text-[#D4AF37]">24 Hours Action</p>
                             </div>
                         </div>
-                    </motion.div>
-                </motion.div>
+                    </div>
+                </div>
 
-                {/* Google Map Embed with Gold Frame */}
+                {/* Google Map Embed with Night Mode Overlay */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="w-full relative group rounded-2xl overflow-hidden mb-12"
+                    className="w-full h-80 relative group rounded-2xl overflow-hidden mb-12 border border-zinc-800"
                 >
-                    <div className="absolute inset-0 border-2 border-[#D4AF37]/20 rounded-2xl pointer-events-none z-20 group-hover:border-[#D4AF37]/60 transition-colors duration-500" />
-                    <div className="h-80 w-full bg-zinc-900 grayscale-[100%] contrast-[1.1] opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.602283151859!2d100.5564858!3d13.7374828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee4424c5555%3A0x6a0c441584444444!2sSukhumvit%2019%20Alley%2C%20Khwaeng%20Khlong%20Toei%20Nuea%2C%20Khet%20Watthana%2C%20Krung%20Thep%20Maha%20Nakhon%2010110%2C%20Thailand!5e0!3m2!1sen!2sus!4v1705030000000!5m2!1sen!2sus"
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
+                    {/* Gold Frame/Border Effect */}
+                    <div className="absolute inset-0 border-2 border-[#D4AF37]/0 rounded-2xl pointer-events-none z-20 group-hover:border-[#D4AF37]/40 transition-colors duration-500" />
+
+                    {/* Dark Mode Iframe Hack: Invert colors + Grayscale + High Contrast */}
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.602283151859!2d100.5564858!3d13.7374828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee4424c5555%3A0x6a0c441584444444!2sSukhumvit%2019%20Alley%2C%20Khwaeng%20Khlong%20Toei%20Nuea%2C%20Khet%20Watthana%2C%20Krung%20Thep%20Maha%20Nakhon%2010110%2C%20Thailand!5e0!3m2!1sen!2sus!4v1705030000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="w-full h-full"
+                    />
+
+                    {/* Blue/Purple Night Tint Overlay */}
+                    <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay pointer-events-none" />
+
+                    {/* Grid Overlay for Tech Vibe */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 pointer-events-none" />
+
+                    {/* Center Pulsing Pin (Decorative) */}
+                    <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                        <div className="relative flex items-center justify-center">
+                            {/* Pulse Effect */}
+                            <div className="absolute w-20 h-20 bg-[#D4AF37]/20 rounded-full animate-ping opacity-75" />
+                            <div className="absolute w-32 h-32 bg-[#D4AF37]/10 rounded-full animate-pulse" />
+
+                            {/* Pin Icon */}
+                            <div className="relative w-14 h-14 bg-[#D4AF37] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.5)]">
+                                <MapPin className="text-black fill-black" size={28} />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Floating Button */}
+                    <div className="absolute bottom-6 right-6 z-20">
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=88+Soi+Sukhumvit+19,+Khlong+Toei+Nuea,+Watthana,+Bangkok+10110,+Thailand"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-black/80 backdrop-blur-md border border-zinc-700/50 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-300 shadow-lg"
+                        >
+                            Open in Google Maps
+                            <ArrowUpRight size={16} />
+                        </a>
                     </div>
                 </motion.div>
 
