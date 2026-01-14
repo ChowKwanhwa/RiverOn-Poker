@@ -277,7 +277,7 @@ export function ContactSection() {
 
                     {/* Dark Mode Iframe Hack: Invert colors + Grayscale + High Contrast */}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.602283151859!2d100.5564858!3d13.7374828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee4424c5555%3A0x6a0c441584444444!2sSukhumvit%2019%20Alley%2C%20Khwaeng%20Khlong%20Toei%20Nuea%2C%20Khet%20Watthana%2C%20Krung%20Thep%20Maha%20Nakhon%2010110%2C%20Thailand!5e0!3m2!1sen!2sus!4v1705030000000!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.6810189311!2d100.3328221!3d13.7563309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sth!4v1705244799000!5m2!1sen!2sth"
                         width="100%"
                         height="100%"
                         style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
