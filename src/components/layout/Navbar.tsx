@@ -5,16 +5,19 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { clsx } from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
+import { Language } from '@/lib/translations';
 
-const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Game Schedule', href: '#schedule' },
-    { name: 'Rules', href: '#rules' },
-    { name: 'Contact', href: '#contact' },
+const getNavItems = (t: any) => [
+    { name: t.nav.home, href: '#home' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.schedule, href: '#schedule' },
+    { name: t.nav.rules, href: '#rules' },
+    { name: t.nav.contact, href: '#contact' },
 ];
 
 export default function Navbar() {
+    const { language, setLanguage, t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -50,21 +53,40 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-8">
-                            {navItems.map((item) => (
+                        <div className="ml-10 flex items-center space-x-8">
+                            {getNavItems(t).map((item) => (
                                 <Link
-                                    key={item.name}
+                                    key={item.href}
                                     href={item.href}
                                     className="text-gray-300 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium uppercase tracking-wider"
                                 >
                                     {item.name}
                                 </Link>
                             ))}
+
+                            {/* Language Switcher */}
+                            <div className="flex items-center gap-2 bg-zinc-900/50 p-1 rounded-full border border-white/10">
+                                {(['en', 'kr', 'cn'] as Language[]).map((lang) => (
+                                    <button
+                                        key={lang}
+                                        onClick={() => setLanguage(lang)}
+                                        className={clsx(
+                                            "px-2 py-1 rounded-full text-[10px] font-bold transition-all",
+                                            language === lang
+                                                ? "bg-primary text-black"
+                                                : "text-zinc-500 hover:text-white"
+                                        )}
+                                    >
+                                        {lang.toUpperCase()}
+                                    </button>
+                                ))}
+                            </div>
+
                             <Link
                                 href="#reservation"
                                 className="bg-primary hover:bg-yellow-500 text-black px-6 py-2 rounded-full font-bold transition-all transform hover:scale-105"
                             >
-                                RESERVE
+                                {t.nav.reserve}
                             </Link>
                         </div>
                     </div>
@@ -88,10 +110,26 @@ export default function Navbar() {
                         exit={{ opacity: 0, height: 0 }}
                         className="md:hidden bg-black/95 backdrop-blur-xl border-b border-primary/20"
                     >
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            {navItems.map((item) => (
+                        <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
+                            <div className="flex justify-center gap-4 mb-6 pt-2">
+                                {(['en', 'kr', 'cn'] as Language[]).map((lang) => (
+                                    <button
+                                        key={lang}
+                                        onClick={() => setLanguage(lang)}
+                                        className={clsx(
+                                            "px-4 py-2 rounded-full text-xs font-bold transition-all",
+                                            language === lang
+                                                ? "bg-primary text-black"
+                                                : "text-zinc-500 bg-zinc-900/50"
+                                        )}
+                                    >
+                                        {lang === 'en' ? 'English' : lang === 'kr' ? '한국어' : '中文'}
+                                    </button>
+                                ))}
+                            </div>
+                            {getNavItems(t).map((item) => (
                                 <Link
-                                    key={item.name}
+                                    key={item.href}
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
                                     className="text-gray-300 hover:text-primary block px-3 py-4 rounded-md text-base font-medium text-center border-b border-white/5"
@@ -104,7 +142,7 @@ export default function Navbar() {
                                 onClick={() => setIsOpen(false)}
                                 className="text-black bg-primary block px-3 py-4 rounded-md text-base font-bold text-center mt-4"
                             >
-                                RESERVE A SEAT
+                                {t.nav.reserveSeat}
                             </Link>
                         </div>
                     </motion.div>

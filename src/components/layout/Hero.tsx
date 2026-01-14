@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { useLanguage } from '@/context/LanguageContext';
 
 const PokerScene = dynamic(() => import('@/components/3d/PokerScene'), { ssr: false });
 
 export default function Hero() {
+    const { t } = useLanguage();
     return (
         <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background with Overlay */}
@@ -32,15 +34,15 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/50 text-sm font-semibold tracking-wider mb-6 uppercase backdrop-blur-md">
-                        The Premier Experience
+                        {t.hero.premier}
                     </span>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight">
                         RiverOn <br />
                         <span className="text-primary">Poker Bangkok</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-                        Experience luxury gaming in the heart of Bangkok. <br />
-                        Private tables. Professional dealers. 24/7 Action.
+                        {t.hero.subtitle} <br />
+                        {t.hero.subtitle2}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -48,13 +50,13 @@ export default function Hero() {
                             href="#reservation"
                             className="w-full sm:w-auto px-8 py-4 bg-primary text-black font-bold text-lg rounded-full hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-lg shadow-primary/25"
                         >
-                            Book Your Seat
+                            {t.hero.book}
                         </Link>
                         <Link
                             href="#contact"
                             className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 text-white font-medium text-lg rounded-full hover:bg-white/10 transition-all backdrop-blur-sm"
                         >
-                            Contact Us
+                            {t.hero.contactUs}
                         </Link>
                     </div>
                 </motion.div>

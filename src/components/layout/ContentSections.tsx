@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Mail, Clock, ShieldCheck, Car, BedDouble, Send, ArrowUpRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 30 },
@@ -23,6 +24,7 @@ const staggerContainer: Variants = {
 };
 
 export function AboutSection() {
+    const { t } = useLanguage();
     return (
         <section id="about" className="py-24 bg-[#0a0a0a] px-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-zinc-900/40 to-transparent pointer-events-none" />
@@ -35,15 +37,13 @@ export function AboutSection() {
                         variants={staggerContainer}
                     >
                         <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
-                            About <span className="text-[#D4AF37]">RiverOn Poker Bangkok</span>
+                            {t.about.title} <span className="text-[#D4AF37]">{t.about.brand}</span>
                         </motion.h2>
                         <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-6">
-                            RiverOn Poker Bangkok is a premium offline poker club located in the heart of Bangkok,
-                            designed exclusively for international players seeking a high-quality live poker experience.
+                            {t.about.p1}
                         </motion.p>
                         <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-10">
-                            Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment.
-                            <span className="text-white font-medium ml-1">RiverOn Poker Bangkok offers a refined atmosphere</span> where both casual and experienced players can enjoy the game with confidence.
+                            {t.about.p2}
                         </motion.p>
 
                         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -117,6 +117,7 @@ export function AboutSection() {
 }
 
 export function GameInfoSection() {
+    const { t } = useLanguage();
     return (
         <section id="schedule" className="py-24 bg-black px-4 relative overflow-hidden">
             {/* Subtle Gradient Glow */}
@@ -129,7 +130,7 @@ export function GameInfoSection() {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Game Schedule & Rules</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">{t.games.title}</h2>
                     <div className="h-0.5 w-20 bg-[#D4AF37] mx-auto mb-16" />
                 </motion.div>
 
@@ -144,26 +145,20 @@ export function GameInfoSection() {
                     <motion.div variants={fadeInUp} className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-br from-[#D4AF37] to-zinc-800 rounded-2xl opacity-30 group-hover:opacity-100 transition duration-500 blur-sm" />
                         <div className="relative h-full bg-zinc-950 p-8 md:p-10 rounded-xl border border-zinc-800 hover:border-[#D4AF37]/50 transition-all duration-300">
-                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase">Daily Schedule</h3>
+                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase">{t.games.title}</h3>
                             <div className="text-white mb-6 text-left">
-                                <p className="text-[#D4AF37] font-bold mb-2">Start Time: 8:00 PM Daily</p>
-                                <p className="text-zinc-400 text-sm">Three games with different blind levels run simultaneously every evening.</p>
+                                <p className="text-[#D4AF37] font-bold mb-2">{t.games.startTime}</p>
+                                <p className="text-zinc-400 text-sm">{t.games.threeGames}</p>
                             </div>
                             <ul className="space-y-4">
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 1</span>
-                                    <span className="font-bold text-white text-lg">Low Blinds</span>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">{t.games.table1.name}</span>
                                 </li>
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 2</span>
-                                    <span className="font-bold text-white text-lg">Mid Blinds</span>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">{t.games.table2.name}</span>
                                 </li>
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 3</span>
-                                    <span className="font-bold text-white text-lg">High Blinds</span>
-                                </li>
-                                <li className="mt-4 text-left">
-                                    <p className="text-sm text-zinc-500">NHL Texas Hold’em. F&B and Parking provided free of charge.</p>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">{t.games.table3.name}</span>
                                 </li>
                             </ul>
                         </div>
@@ -173,39 +168,39 @@ export function GameInfoSection() {
                     <motion.div variants={fadeInUp} className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-bl from-[#D4AF37] to-zinc-800 rounded-2xl opacity-30 group-hover:opacity-100 transition duration-500 blur-sm" />
                         <div className="relative h-full bg-zinc-950 p-8 md:p-10 rounded-xl border border-zinc-800 hover:border-[#D4AF37]/50 transition-all duration-300 text-left">
-                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase text-center">Insurance & Special Rules</h3>
+                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase text-center">{t.rules.title}</h3>
                             <div className="space-y-6">
                                 <div>
                                     <h4 className="text-white font-bold mb-2 flex items-center gap-2">
                                         <ShieldCheck size={18} className="text-[#D4AF37]" />
-                                        Poker Insurance
+                                        {t.rules.insurance.title}
                                     </h4>
                                     <p className="text-sm text-zinc-400 leading-relaxed mb-2">
-                                        An optional feature to reduce variance in all-in situations. Secure part of the pot in advance when you are statistically ahead.
+                                        {t.rules.insurance.desc}
                                     </p>
                                     <ul className="text-xs text-zinc-500 space-y-1 list-disc pl-4">
-                                        <li>Reduces variance in large pots</li>
-                                        <li>Available in all-in situations before river</li>
-                                        <li>Guaranteed payout based on equity</li>
+                                        <li>{t.rules.insurance.bullet1}</li>
+                                        <li>{t.rules.insurance.bullet2}</li>
+                                        <li>{t.rules.insurance.bullet3}</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-2 flex items-center gap-2">
                                         <div className="w-5 h-5 rounded-full border border-pink-500 flex items-center justify-center text-[10px] text-pink-500 font-bold italic">S</div>
-                                        Squid Game Rules
+                                        {t.rules.squid.title}
                                     </h4>
                                     <div className="space-y-3">
                                         <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
-                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 1: The 7-2 Incentive</p>
-                                            <p className="text-xs text-zinc-400">Winning a hand with 7-2 offsuit (hole cards) earns an immediate bounty from every active player at the table.</p>
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">{t.rules.squid.c1}</p>
+                                            <p className="text-xs text-zinc-400">{t.rules.squid.c1Desc}</p>
                                         </div>
                                         <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
-                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 2: Stand-Up Game</p>
-                                            <p className="text-xs text-zinc-400">The "Squid" is the last player to win a pot. Survivors "sit down" after winning; the last one standing pays a table penalty.</p>
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">{t.rules.squid.c2}</p>
+                                            <p className="text-xs text-zinc-400">{t.rules.squid.c2Desc}</p>
                                         </div>
                                         <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
-                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 3: The Squid Pot</p>
-                                            <p className="text-xs text-zinc-400">A progressive mystery jackpot triggered by specific high-hand milestones or bad-beat scenarios.</p>
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">{t.rules.squid.c3}</p>
+                                            <p className="text-xs text-zinc-400">{t.rules.squid.c3Desc}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -219,6 +214,7 @@ export function GameInfoSection() {
 }
 
 export function ContactSection() {
+    const { t } = useLanguage();
     return (
         <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-zinc-900 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -229,7 +225,7 @@ export function ContactSection() {
                         <div className="flex items-start gap-4 text-zinc-400 group cursor-pointer hover:text-white transition-colors">
                             <MapPin className="flex-shrink-0 text-[#D4AF37] mt-1" />
                             <p className="leading-relaxed">
-                                88 Soi Sukhumvit 19, <br />
+                                {t.contact.address} <br />
                                 Khlong Toei Nuea, Watthana, <br />
                                 Bangkok 10110, Thailand
                             </p>
@@ -238,7 +234,7 @@ export function ContactSection() {
 
                     {/* Contact Links */}
                     <div className="space-y-6">
-                        <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">Connect</h4>
+                        <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">{t.nav.contact}</h4>
                         <div className="space-y-4">
                             <a href="https://line.me/ti/p/KAHzfaD_hP" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#00B900]/20 flex items-center justify-center text-[#00B900] group-hover:bg-[#00B900] group-hover:text-white transition-all font-bold text-xs ring-1 ring-[#00B900]/50">LINE</div>
@@ -253,12 +249,12 @@ export function ContactSection() {
 
                     {/* Hours */}
                     <div className="space-y-6">
-                        <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">Hours</h4>
+                        <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">{t.contact.openHours}</h4>
                         <div className="flex items-start gap-4 text-zinc-400">
                             <div className="w-10 h-10 rounded bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37]"><Clock size={20} /></div>
                             <div>
-                                <p className="text-white font-bold text-lg">Open Daily</p>
-                                <p className="text-[#D4AF37]">24 Hours Action</p>
+                                <p className="text-white font-bold text-lg">{t.contact.openHours}</p>
+                                <p className="text-[#D4AF37]">{t.contact.gameStart}</p>
                             </div>
                         </div>
                     </div>
@@ -315,7 +311,7 @@ export function ContactSection() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-black/80 backdrop-blur-md border border-zinc-700/50 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-300 shadow-lg"
                         >
-                            Open in Google Maps
+                            {t.contact.googleMaps}
                             <ArrowUpRight size={16} />
                         </a>
                     </div>
