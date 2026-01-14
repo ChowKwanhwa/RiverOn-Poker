@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://riveronpokerbangkok.com'),
+  metadataBase: new URL('https://riveronbangkok.com'),
   title: 'RiverOn Poker Bangkok | Premier Texas Hold\'em Club',
   description: 'Experience the best Texas Hold\'em in Bangkok at RiverOn Poker. Luxury environment, professional dealers, and 24/7 action. Book your seat now!',
   keywords: ['Poker Bangkok', 'Texas Hold\'em Thailand', 'RiverOn Poker', 'Bangkok Nightlife', 'Poker Tournament Bangkok', '방콕 포커', '曼谷扑克'],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Experience luxury gaming in the heart of Bangkok. Private tables, professional dealers, and 24/7 poker action.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://riveronpokerbangkok.com',
+    url: 'https://riveronbangkok.com',
     siteName: 'RiverOn Poker Bangkok',
     images: [{
       url: '/logo.jpeg',

@@ -8,9 +8,9 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'RiverOn Poker Bangkok',
-    'image': 'https://riveronpokerbangkok.com/site-photo-nano.jpeg',
-    '@id': 'https://riveronpokerbangkok.com',
-    'url': 'https://riveronpokerbangkok.com',
+    'image': 'https://riveronbangkok.com/site-photo-nano.jpeg',
+    '@id': 'https://riveronbangkok.com',
+    'url': 'https://riveronbangkok.com',
     'telephone': '+66-XX-XXX-XXXX',
     'address': {
       '@type': 'PostalAddress',
