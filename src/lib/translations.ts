@@ -24,13 +24,23 @@ export const translations = {
             brand: 'RiverOn Poker Bangkok',
             p1: 'RiverOn Poker Bangkok is a premium offline poker club located in the heart of Bangkok, designed exclusively for international players seeking a high-quality live poker experience.',
             p2: 'Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment. RiverOn Poker Bangkok offers a refined atmosphere where both casual and experienced players can enjoy the game with confidence.',
-            fbParking: {
-                title: 'F&B & Parking',
-                desc: 'Complimentary food, drinks, and free parking provided for all players.'
-            },
-            insurance: {
-                title: 'Insurance Rules',
-                desc: 'Optional feature to reduce variance in all-in situations.'
+            features: {
+                safe: {
+                    title: 'Safe & Secure',
+                    desc: 'Professional security team and fair play guaranteed at high standards.'
+                },
+                transfer: {
+                    title: 'VIP Transfer',
+                    desc: 'Complimentary luxury pick-up service for verified VIP players.'
+                },
+                fb: {
+                    title: 'F&B & Parking',
+                    desc: 'Complimentary food, drinks, and free parking provided for all guests.'
+                },
+                insurance: {
+                    title: 'Insurance Rules',
+                    desc: 'Optional feature to reduce variance in all-in situations for players.'
+                }
             }
         },
         reservation: {
@@ -96,9 +106,12 @@ export const translations = {
         contact: {
             title: 'Join the Action',
             subtitle: 'Visit our premium lounge in the heart of Bangkok or reach out via social apps.',
-            address: 'Ploenchit, Bangkok',
-            openHours: '24/7 VIP Access',
-            gameStart: 'Games start daily at 8:00 PM',
+            address: '88 Soi Sukhumvit 19, Bangkok',
+            fullAddress: 'Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand',
+            lineLabel: 'Add us on LINE',
+            telegramLabel: 'Contact on Telegram',
+            openHours: 'Open Daily',
+            gameStart: '24 Hours Action',
             googleMaps: 'Open in Google Maps'
         }
     },
@@ -125,13 +138,23 @@ export const translations = {
             brand: '리버온 포커 방콕',
             p1: '리버온 포커 방콕은 방콕 중심부에 위치한 프리미엄 오프라인 포커 클럽으로, 고품질 라이브 포커 경험을 원하는 국제 플레이어들을 위해 특별히 설계되었습니다.',
             p2: '우리의 목표는 전 세계 플레이어들이 편안하고 공정하며 전문적으로 관리되는 환경에서 함께 게임을 즐기는 것입니다. 리버온 포커 방콕은 초보자와 숙련된 플레이어 모두가 안심하고 게임을 즐길 수 있는 세련된 분위기를 제공합니다.',
-            fbParking: {
-                title: '식음료 및 주차',
-                desc: '모든 플레이어에게 무료 식음료 및 무료 주차가 제공됩니다.'
-            },
-            insurance: {
-                title: '보험 규칙',
-                desc: '올인 상황에서 변동성을 줄이기 위한 선택적 기능입니다.'
+            features: {
+                safe: {
+                    title: '안전 및 보안',
+                    desc: '전문 보안 팀과 높은 수준의 페어플레이가 보장됩니다.'
+                },
+                transfer: {
+                    title: 'VIP 픽업',
+                    desc: '검증된 VIP 플레이어를 위한 무료 럭셔리 픽업 서비스.'
+                },
+                fb: {
+                    title: '식음료 및 주차',
+                    desc: '모든 플레이어에게 무료 식음료 및 주차가 제공됩니다.'
+                },
+                insurance: {
+                    title: '보험 규칙',
+                    desc: '올인 상황에서 변동성을 줄이기 위한 선택적 기능입니다.'
+                }
             }
         },
         reservation: {
@@ -197,9 +220,12 @@ export const translations = {
         contact: {
             title: '게임 참여하기',
             subtitle: '방콕 중심부의 프리미엄 라운지를 방문하시거나 소셜 앱을 통해 문의하세요.',
-            address: '플런칫, 방콕',
-            openHours: '24/7 VIP 액세스',
-            gameStart: '게임은 매일 오후 8시에 시작됩니다',
+            address: '88 Soi Sukhumvit 19, 방콕',
+            fullAddress: '클롱 토이 누에아, 와타나, 방콕 10110, 태국',
+            lineLabel: 'LINE으로 추가',
+            telegramLabel: '텔레그램으로 문의',
+            openHours: '매일 운영',
+            gameStart: '24시간 게임 가능',
             googleMaps: '구글 맵에서 열기'
         }
     },
@@ -226,13 +252,23 @@ export const translations = {
             brand: 'RiverOn Poker Bangkok',
             p1: 'RiverOn Poker Bangkok 是一家位于曼谷市中心的顶级线下扑克俱乐部，专为寻求高质量现场扑克体验的国际玩家打造。',
             p2: '我们的目标是在舒适、公平且专业管理的环中汇聚来自世界各地的玩家。RiverOn Poker Bangkok 提供精致的氛围，让普通及资深玩家都能从容享受游戏的乐趣。',
-            fbParking: {
-                title: '餐饮与停车',
-                desc: '为所有玩家提供免费餐饮及免费停车。'
-            },
-            insurance: {
-                title: '保险规则',
-                desc: '在全下（All-in）情况下减少波动的可选功能。'
+            features: {
+                safe: {
+                    title: '安全保障',
+                    desc: '专业安保团队，确保公平竞技与高标准安全。'
+                },
+                transfer: {
+                    title: 'VIP 接送',
+                    desc: '为认证的 VIP 玩家提供免费豪华接送服务。'
+                },
+                fb: {
+                    title: '餐饮与停车',
+                    desc: '为所有玩家提供免费餐饮及免费停车。'
+                },
+                insurance: {
+                    title: '保险规则',
+                    desc: '在全下（All-in）情况下减少波动的可选功能。'
+                }
             }
         },
         reservation: {
@@ -298,9 +334,12 @@ export const translations = {
         contact: {
             title: '加入我们',
             subtitle: '访问我们位于曼谷市中心的顶级休息室，或通过社交软件联系我们。',
-            address: '曼谷 Ploenchit',
-            openHours: '24/7 VIP 访问',
-            gameStart: '每日 8:00 PM 开赛',
+            address: '88 Soi Sukhumvit 19, 曼谷',
+            fullAddress: '曼谷瓦他那县 Khlong Toei Nuea 10110',
+            lineLabel: '添加 LINE 联系',
+            telegramLabel: '通过 Telegram 联系',
+            openHours: '每日开放',
+            gameStart: '24小时精彩不断',
             googleMaps: '在谷歌地图中打开'
         }
     }

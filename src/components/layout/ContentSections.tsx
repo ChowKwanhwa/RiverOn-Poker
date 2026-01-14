@@ -52,8 +52,8 @@ export function AboutSection() {
                                 <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
                                     <ShieldCheck size={24} />
                                 </div>
-                                <h4 className="font-bold text-white text-lg mb-2">Safe & Secure</h4>
-                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Professional security team and fair play guaranteed at high standards.</p>
+                                <h4 className="font-bold text-white text-lg mb-2">{t.about.features.safe.title}</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">{t.about.features.safe.desc}</p>
                             </motion.div>
 
                             {/* Feature Card 2 */}
@@ -61,8 +61,8 @@ export function AboutSection() {
                                 <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
                                     <Car size={24} />
                                 </div>
-                                <h4 className="font-bold text-white text-lg mb-2">VIP Transfer</h4>
-                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Complimentary luxury pick-up service for verified VIP players.</p>
+                                <h4 className="font-bold text-white text-lg mb-2">{t.about.features.transfer.title}</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">{t.about.features.transfer.desc}</p>
                             </motion.div>
 
                             {/* Feature Card 3 */}
@@ -70,8 +70,8 @@ export function AboutSection() {
                                 <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
                                     <BedDouble size={24} />
                                 </div>
-                                <h4 className="font-bold text-white text-lg mb-2">F&B & Parking</h4>
-                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Complimentary food, drinks, and free parking provided for all guests.</p>
+                                <h4 className="font-bold text-white text-lg mb-2">{t.about.features.fb.title}</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">{t.about.features.fb.desc}</p>
                             </motion.div>
 
                             {/* Feature Card 4 */}
@@ -79,8 +79,8 @@ export function AboutSection() {
                                 <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
                                     <ShieldCheck size={24} />
                                 </div>
-                                <h4 className="font-bold text-white text-lg mb-2">Insurance Rules</h4>
-                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Optional feature to reduce variance in all-in situations for players.</p>
+                                <h4 className="font-bold text-white text-lg mb-2">{t.about.features.insurance.title}</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">{t.about.features.insurance.desc}</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>
@@ -226,8 +226,7 @@ export function ContactSection() {
                             <MapPin className="flex-shrink-0 text-[#D4AF37] mt-1" />
                             <p className="leading-relaxed">
                                 {t.contact.address} <br />
-                                Khlong Toei Nuea, Watthana, <br />
-                                Bangkok 10110, Thailand
+                                {t.contact.fullAddress}
                             </p>
                         </div>
                     </div>
@@ -238,11 +237,11 @@ export function ContactSection() {
                         <div className="space-y-4">
                             <a href="https://line.me/ti/p/KAHzfaD_hP" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#00B900]/20 flex items-center justify-center text-[#00B900] group-hover:bg-[#00B900] group-hover:text-white transition-all font-bold text-xs ring-1 ring-[#00B900]/50">LINE</div>
-                                <span>Add us on LINE</span>
+                                <span>{t.contact.lineLabel}</span>
                             </a>
                             <a href="https://t.me/yangcha123" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#0088cc]/20 flex items-center justify-center text-[#0088cc] group-hover:bg-[#0088cc] group-hover:text-white transition-all ring-1 ring-[#0088cc]/50"><Send size={18} /></div>
-                                <span>Contact on Telegram</span>
+                                <span>{t.contact.telegramLabel}</span>
                             </a>
                         </div>
                     </div>
