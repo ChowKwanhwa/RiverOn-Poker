@@ -35,12 +35,15 @@ export function AboutSection() {
                         variants={staggerContainer}
                     >
                         <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
-                            About <span className="text-[#D4AF37]">RiverOn</span>
+                            About <span className="text-[#D4AF37]">RiverOn Poker Bangkok</span>
                         </motion.h2>
-                        <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-10">
+                        <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-6">
                             RiverOn Poker Bangkok is a premium offline poker club located in the heart of Bangkok,
                             designed exclusively for international players seeking a high-quality live poker experience.
+                        </motion.p>
+                        <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-10">
                             Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment.
+                            <span className="text-white font-medium ml-1">ATLAS offers a refined atmosphere</span> where both casual and experienced players can enjoy the game with confidence.
                         </motion.p>
 
                         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -166,25 +169,36 @@ export function GameInfoSection() {
                         </div>
                     </motion.div>
 
-                    {/* House Rules Menu Card */}
+                    {/* House Rules & Insurance Menu Card */}
                     <motion.div variants={fadeInUp} className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-bl from-[#D4AF37] to-zinc-800 rounded-2xl opacity-30 group-hover:opacity-100 transition duration-500 blur-sm" />
                         <div className="relative h-full bg-zinc-950 p-8 md:p-10 rounded-xl border border-zinc-800 hover:border-[#D4AF37]/50 transition-all duration-300 text-left">
-                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase text-center">House Rules</h3>
-                            <ul className="space-y-4 text-zinc-300">
-                                <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-zinc-900 transition-colors">
-                                    <span className="text-[#D4AF37] font-bold text-xl">•</span>
-                                    <span><strong className="text-white">Respect:</strong> Maintain a respectful demeanor towards dealers and players at all times.</span>
-                                </li>
-                                <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-zinc-900 transition-colors">
-                                    <span className="text-[#D4AF37] font-bold text-xl">•</span>
-                                    <span><strong className="text-white">Fair Play:</strong> English only at the table. No sunglasses or hoods to ensure transparency.</span>
-                                </li>
-                                <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-zinc-900 transition-colors">
-                                    <span className="text-[#D4AF37] font-bold text-xl">•</span>
-                                    <span><strong className="text-white">Zero Tolerance:</strong> Collusion or cheating results in immediate ban and forfeiture.</span>
-                                </li>
-                            </ul>
+                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase text-center">Insurance & Special Rules</h3>
+                            <div className="space-y-6">
+                                <div>
+                                    <h4 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <ShieldCheck size={18} className="text-[#D4AF37]" />
+                                        Poker Insurance
+                                    </h4>
+                                    <p className="text-sm text-zinc-400 leading-relaxed mb-2">
+                                        An optional feature to reduce variance in all-in situations. Secure part of the pot in advance when you are statistically ahead.
+                                    </p>
+                                    <ul className="text-xs text-zinc-500 space-y-1 list-disc pl-4">
+                                        <li>Reduces variance in large pots</li>
+                                        <li>Available in all-in situations before river</li>
+                                        <li>Guaranteed payout based on equity</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <Send size={18} className="text-[#D4AF37]" />
+                                        Squid Game Rules
+                                    </h4>
+                                    <p className="text-sm text-zinc-400 leading-relaxed italic">
+                                        Contact our floor manager or host for detailed rules on our exclusive Squid Game poker variant.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>
