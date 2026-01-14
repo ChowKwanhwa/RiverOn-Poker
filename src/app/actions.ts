@@ -22,7 +22,10 @@ export async function submitReservation(prevState: ReservationState, formData: F
 
     // Telegram Configuration
     const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    const CHAT_IDS = [
+        process.env.TELEGRAM_CHAT_ID,
+        process.env.TELEGRAM_CHAT_ID2
+    ].filter(Boolean); // Only keep defined IDs
 
     // Formatting the message
     // Use HTML to allow <code> tags for one-click copy
@@ -39,25 +42,27 @@ export async function submitReservation(prevState: ReservationState, formData: F
   `;
 
     try {
-        if (BOT_TOKEN && CHAT_ID) {
+        if (BOT_TOKEN && CHAT_IDS.length > 0) {
             const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: CHAT_ID,
-                    text: messageText,
-                    parse_mode: 'HTML', // Changed to HTML for better formatting control
-                }),
-            });
+            // Send to all defined chat IDs in parallel
+            await Promise.all(CHAT_IDS.map(async (chatId) => {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: messageText,
+                        parse_mode: 'HTML',
+                    }),
+                });
 
-            if (!response.ok) {
-                console.error('Telegram API Error:', await response.text());
-                // We still return success to the user so they don't panic, but log the error for the admin
-            }
+                if (!response.ok) {
+                    console.error(`Telegram API Error for ${chatId}:`, await response.text());
+                }
+            }));
         } else {
             console.warn('Telegram Credentials missing. Simulating success.');
             await new Promise(resolve => setTimeout(resolve, 1000));
