@@ -41,22 +41,37 @@ export async function submitReservation(prevState: ReservationState, formData: F
 <i>Please arrange reception.</i>
   `;
 
+    const passportPhoto = formData.get('passportPhoto') as File;
+    const hasPhoto = passportPhoto && passportPhoto.size > 0;
+
     try {
         if (BOT_TOKEN && CHAT_IDS.length > 0) {
-            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-
             // Send to all defined chat IDs in parallel
             await Promise.all(CHAT_IDS.map(async (chatId) => {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
+                let url: string;
+                let body: any;
+
+                if (hasPhoto) {
+                    url = `https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`;
+                    const photoData = new FormData();
+                    photoData.append('chat_id', chatId!);
+                    photoData.append('photo', passportPhoto);
+                    photoData.append('caption', messageText);
+                    photoData.append('parse_mode', 'HTML');
+                    body = photoData;
+                } else {
+                    url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+                    body = JSON.stringify({
                         chat_id: chatId,
                         text: messageText,
                         parse_mode: 'HTML',
-                    }),
+                    });
+                }
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: !hasPhoto ? { 'Content-Type': 'application/json' } : {},
+                    body: body,
                 });
 
                 if (!response.ok) {

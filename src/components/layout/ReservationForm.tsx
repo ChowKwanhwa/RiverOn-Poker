@@ -3,7 +3,7 @@
 import { useTransition, useState } from 'react';
 import { submitReservation } from '@/app/actions';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle2, AlertCircle, MessageCircle } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, MessageCircle, Upload, Camera } from 'lucide-react';
 import { clsx } from 'clsx';
 
 export default function ReservationForm() {
@@ -96,11 +96,29 @@ export default function ReservationForm() {
                                 <label htmlFor="passport" className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold pl-1">Passport Number</label>
                                 <input
                                     type="text"
+                                    id="passport"
                                     name="passport"
                                     required
                                     className="w-full bg-black/40 border-b border-zinc-700 rounded-t-lg px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-primary focus:bg-primary/5 transition-all duration-300"
                                     placeholder="Required for secure verification"
                                 />
+                            </div>
+
+                            <div className="space-y-2 group">
+                                <label htmlFor="passportPhoto" className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold pl-1">Passport Photo (Optional)</label>
+                                <div className="relative">
+                                    <input
+                                        type="file"
+                                        id="passportPhoto"
+                                        name="passportPhoto"
+                                        accept="image/*"
+                                        className="w-full bg-black/40 border-b border-zinc-700 rounded-t-lg px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-primary focus:bg-primary/5 transition-all duration-300 file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-[#D4AF37]/10 file:text-[#D4AF37] hover:file:bg-[#D4AF37]/20"
+                                    />
+                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500">
+                                        <Camera size={16} />
+                                    </div>
+                                </div>
+                                <p className="text-[10px] text-zinc-500 mt-1 pl-1">Format: JPG, PNG. Max size: 5MB.</p>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
