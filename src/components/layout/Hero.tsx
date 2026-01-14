@@ -19,8 +19,8 @@ export default function Hero() {
                 {/* Custom Hero Background */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop"
-                    alt="RiverOn Poker Atmoshere"
+                    src="/hero-bg.jpeg"
+                    alt="RiverOn Poker Atmosphere"
                     className="w-full h-full object-cover object-center"
                 />
             </div>

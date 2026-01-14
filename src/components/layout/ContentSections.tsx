@@ -38,8 +38,9 @@ export function AboutSection() {
                             About <span className="text-[#D4AF37]">RiverOn</span>
                         </motion.h2>
                         <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-10">
-                            RiverOn Poker Bangkok is the city's premier destination for Texas Hold'em enthusiasts.
-                            We have established a sanctuary where luxury meets the thrill of the game, offering a safe, legal, and private environment for players from around the world.
+                            RiverOn Poker Bangkok is a premium offline poker club located in the heart of Bangkok,
+                            designed exclusively for international players seeking a high-quality live poker experience.
+                            Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment.
                         </motion.p>
 
                         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -61,19 +62,22 @@ export function AboutSection() {
                                 <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Complimentary luxury pick-up service for verified VIP players.</p>
                             </motion.div>
 
-                            {/* Feature Card 3 (Spans full width on mobile, half on md) */}
-                            <motion.div variants={fadeInUp} className="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#D4AF37]/50 hover:bg-zinc-800/80 transition-all duration-300 md:col-span-2">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 flex-shrink-0 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] group-hover:scale-110 transition-transform">
-                                        <BedDouble size={24} />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-white text-lg mb-2">Premium Accommodation</h4>
-                                        <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">
-                                            We assist with 5-star hotel bookings near the club, ensuring your stay is as comfortable as your game.
-                                        </p>
-                                    </div>
+                            {/* Feature Card 3 */}
+                            <motion.div variants={fadeInUp} className="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#D4AF37]/50 hover:bg-zinc-800/80 transition-all duration-300">
+                                <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
+                                    <BedDouble size={24} />
                                 </div>
+                                <h4 className="font-bold text-white text-lg mb-2">F&B & Parking</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Complimentary food, drinks, and free parking provided for all guests.</p>
+                            </motion.div>
+
+                            {/* Feature Card 4 */}
+                            <motion.div variants={fadeInUp} className="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#D4AF37]/50 hover:bg-zinc-800/80 transition-all duration-300">
+                                <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
+                                    <ShieldCheck size={24} />
+                                </div>
+                                <h4 className="font-bold text-white text-lg mb-2">Insurance Rules</h4>
+                                <p className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors">Optional feature to reduce variance in all-in situations for players.</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>
@@ -137,23 +141,26 @@ export function GameInfoSection() {
                     <motion.div variants={fadeInUp} className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-br from-[#D4AF37] to-zinc-800 rounded-2xl opacity-30 group-hover:opacity-100 transition duration-500 blur-sm" />
                         <div className="relative h-full bg-zinc-950 p-8 md:p-10 rounded-xl border border-zinc-800 hover:border-[#D4AF37]/50 transition-all duration-300">
-                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase">Cash Games</h3>
-                            <ul className="space-y-6">
+                            <h3 className="text-2xl font-serif font-bold text-[#D4AF37] mb-8 tracking-wide uppercase">Daily Schedule</h3>
+                            <div className="text-white mb-6 text-left">
+                                <p className="text-[#D4AF37] font-bold mb-2">Start Time: 8:00 PM Daily</p>
+                                <p className="text-zinc-400 text-sm">Three games with different blind levels run simultaneously every evening.</p>
+                            </div>
+                            <ul className="space-y-4">
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Blinds</span>
-                                    <span className="font-bold text-white text-lg">50/100 THB</span>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 1</span>
+                                    <span className="font-bold text-white text-lg">Low Blinds</span>
                                 </li>
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Min Buy-in</span>
-                                    <span className="font-bold text-white text-lg">5,000 THB</span>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 2</span>
+                                    <span className="font-bold text-white text-lg">Mid Blinds</span>
                                 </li>
                                 <li className="flex justify-between items-center border-b border-zinc-900 pb-2 group/item hover:border-[#D4AF37]/30 transition-colors">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Max Buy-in</span>
-                                    <span className="font-bold text-white text-lg">20,000 THB</span>
+                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Table 3</span>
+                                    <span className="font-bold text-white text-lg">High Blinds</span>
                                 </li>
-                                <li className="flex justify-between items-center pt-2 group/item">
-                                    <span className="text-zinc-400 font-medium group-hover/item:text-zinc-200">Rake</span>
-                                    <span className="font-bold text-[#D4AF37] text-lg">5% (Cap 500)</span>
+                                <li className="mt-4 text-left">
+                                    <p className="text-sm text-zinc-500">NHL Texas Hold’em. F&B and Parking provided free of charge.</p>
                                 </li>
                             </ul>
                         </div>
@@ -208,13 +215,13 @@ export function ContactSection() {
                     <div className="space-y-6">
                         <h4 className="font-bold text-white text-lg uppercase tracking-wider mb-2">Connect</h4>
                         <div className="space-y-4">
-                            <a href="#" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
+                            <a href="https://line.me/ti/p/KAHzfaD_hP" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#00B900]/20 flex items-center justify-center text-[#00B900] group-hover:bg-[#00B900] group-hover:text-white transition-all font-bold text-xs ring-1 ring-[#00B900]/50">LINE</div>
-                                <span>@RiverOnPoker (Coming Soon)</span>
+                                <span>Add us on LINE</span>
                             </a>
-                            <a href="#" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
+                            <a href="https://t.me/yangcha123" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#0088cc]/20 flex items-center justify-center text-[#0088cc] group-hover:bg-[#0088cc] group-hover:text-white transition-all ring-1 ring-[#0088cc]/50"><Send size={18} /></div>
-                                <span>@RiverOn (Coming Soon)</span>
+                                <span>Contact on Telegram</span>
                             </a>
                         </div>
                     </div>
