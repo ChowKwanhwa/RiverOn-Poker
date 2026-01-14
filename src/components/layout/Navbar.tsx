@@ -77,7 +77,7 @@ export default function Navbar() {
                                                 : "text-zinc-500 hover:text-white"
                                         )}
                                     >
-                                        {lang.toUpperCase()}
+                                        {lang === 'en' ? 'English' : lang === 'kr' ? '한국어' : '中文'}
                                     </button>
                                 ))}
                             </div>
