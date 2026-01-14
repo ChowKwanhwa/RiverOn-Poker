@@ -259,7 +259,7 @@ export const translations = {
                 },
                 transfer: {
                     title: 'VIP 接送',
-                    desc: '为认证的 VIP 玩家提供免费豪华接送服务。'
+                    desc: '为预约的 VIP 玩家提供免费豪华接送服务。'
                 },
                 fb: {
                     title: '餐饮与停车',
@@ -283,8 +283,8 @@ export const translations = {
             passportPhoto: '护照照片（可选）',
             passportPhotoNotice: '格式：JPG, PNG。最大：5MB。',
             contactApp: '联系方式',
-            contactAppPlaceholder: '选择应用（可选）',
-            appId: '应用 ID / 用户名',
+            contactAppPlaceholder: '选择App（可选）',
+            appId: 'App ID / 用户名',
             appIdPlaceholder: '@用户名（可选）',
             arrivalDate: '到达日期',
             arrivalTime: '时间',
