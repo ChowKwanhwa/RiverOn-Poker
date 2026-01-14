@@ -191,12 +191,23 @@ export function GameInfoSection() {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                                        <Send size={18} className="text-[#D4AF37]" />
+                                        <div className="w-5 h-5 rounded-full border border-pink-500 flex items-center justify-center text-[10px] text-pink-500 font-bold italic">S</div>
                                         Squid Game Rules
                                     </h4>
-                                    <p className="text-sm text-zinc-400 leading-relaxed italic">
-                                        Contact our floor manager or host for detailed rules on our exclusive Squid Game poker variant.
-                                    </p>
+                                    <div className="space-y-3">
+                                        <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 1: The 7-2 Incentive</p>
+                                            <p className="text-xs text-zinc-400">Winning a hand with 7-2 offsuit (hole cards) earns an immediate bounty from every active player at the table.</p>
+                                        </div>
+                                        <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 2: Stand-Up Game</p>
+                                            <p className="text-xs text-zinc-400">The "Squid" is the last player to win a pot. Survivors "sit down" after winning; the last one standing pays a table penalty.</p>
+                                        </div>
+                                        <div className="bg-white/5 p-3 rounded-lg border border-white/10 hover:border-pink-500/30 transition-colors">
+                                            <p className="text-pink-500 text-[10px] font-bold uppercase tracking-wider mb-1">Challenge 3: The Squid Pot</p>
+                                            <p className="text-xs text-zinc-400">A progressive mystery jackpot triggered by specific high-hand milestones or bad-beat scenarios.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
