@@ -43,7 +43,7 @@ export function AboutSection() {
                         </motion.p>
                         <motion.p variants={fadeInUp} className="text-zinc-400 text-lg leading-relaxed mb-10">
                             Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment.
-                            <span className="text-white font-medium ml-1">ATLAS offers a refined atmosphere</span> where both casual and experienced players can enjoy the game with confidence.
+                            <span className="text-white font-medium ml-1">RiverOn Poker Bangkok offers a refined atmosphere</span> where both casual and experienced players can enjoy the game with confidence.
                         </motion.p>
 
                         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -99,8 +99,8 @@ export function AboutSection() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop"
-                                alt="Poker Table"
+                                src="/site-photo-nano.jpeg"
+                                alt="RiverOn Poker Club Interior"
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
 

@@ -6,7 +6,7 @@ About Us | RiverOn Poker Bangkok
 RiverOn Poker Bangkok is a premium offline poker club located in the heart of Bangkok,
 designed exclusively for international players seeking a high-quality live poker experience.
 
-Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment. ATLAS offers a refined atmosphere where both casual and experienced players can enjoy the game with confidence.
+Our goal is to bring together players from around the world in a comfortable, fair, and professionally managed environment. RiverOn Poker Bangkok offers a refined atmosphere where both casual and experienced players can enjoy the game with confidence.
 
 🎲 Games
 	•	Main game: NHL Texas Hold’em

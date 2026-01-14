@@ -1,4 +1,4 @@
-Game Schedule | ATLAS Poker Club
+Game Schedule | RiverOn Poker Bangkok
 
 Game Type: NHL Texas Hold’em
 Start Time: Every day at 8:00 PM
