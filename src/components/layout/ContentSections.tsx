@@ -225,8 +225,13 @@ export function ContactSection() {
                         <div className="flex items-start gap-4 text-zinc-400 group cursor-pointer hover:text-white transition-colors">
                             <MapPin className="flex-shrink-0 text-[#D4AF37] mt-1" />
                             <p className="leading-relaxed">
-                                {t.contact.address} <br />
-                                {t.contact.fullAddress}
+                                {t.contact.address}
+                                {t.contact.fullAddress && (
+                                    <>
+                                        <br />
+                                        {t.contact.fullAddress}
+                                    </>
+                                )}
                             </p>
                         </div>
                     </div>
@@ -305,7 +310,7 @@ export function ContactSection() {
                     {/* Floating Button */}
                     <div className="absolute bottom-6 right-6 z-20">
                         <a
-                            href="https://www.google.com/maps/search/?api=1&query=88+Soi+Sukhumvit+19,+Khlong+Toei+Nuea,+Watthana,+Bangkok+10110,+Thailand"
+                            href="https://www.google.com/maps/search/?api=1&query=Bangkok,+Thailand"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-black/80 backdrop-blur-md border border-zinc-700/50 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-all duration-300 shadow-lg"

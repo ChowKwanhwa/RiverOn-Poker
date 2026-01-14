@@ -14,16 +14,14 @@ export default function Home() {
     'telephone': '+66-XX-XXX-XXXX',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': '88 Soi Sukhumvit 19',
-      'addressLocality': 'Khlong Toei Nuea, Watthana',
+      'addressLocality': 'Bangkok',
       'addressRegion': 'Bangkok',
-      'postalCode': '10110',
       'addressCountry': 'TH'
     },
     'geo': {
       '@type': 'GeoCoordinates',
-      'latitude': 13.7383,
-      'longitude': 100.5604
+      'latitude': 13.7563,
+      'longitude': 100.5018
     },
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',

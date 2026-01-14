@@ -106,8 +106,8 @@ export const translations = {
         contact: {
             title: 'Join the Action',
             subtitle: 'Visit our premium lounge in the heart of Bangkok or reach out via social apps.',
-            address: '88 Soi Sukhumvit 19, Bangkok',
-            fullAddress: 'Khlong Toei Nuea, Watthana, Bangkok 10110, Thailand',
+            address: 'Bangkok, Thailand',
+            fullAddress: '',
             lineLabel: 'Add us on LINE',
             telegramLabel: 'Contact on Telegram',
             openHours: 'Open Daily',
@@ -220,8 +220,8 @@ export const translations = {
         contact: {
             title: '게임 참여하기',
             subtitle: '방콕 중심부의 프리미엄 라운지를 방문하시거나 소셜 앱을 통해 문의하세요.',
-            address: '88 Soi Sukhumvit 19, 방콕',
-            fullAddress: '클롱 토이 누에아, 와타나, 방콕 10110, 태국',
+            address: '태국 방콕',
+            fullAddress: '',
             lineLabel: 'LINE으로 추가',
             telegramLabel: '텔레그램으로 문의',
             openHours: '매일 운영',
@@ -334,8 +334,8 @@ export const translations = {
         contact: {
             title: '加入我们',
             subtitle: '访问我们位于曼谷市中心的顶级休息室，或通过社交软件联系我们。',
-            address: '88 Soi Sukhumvit 19, 曼谷',
-            fullAddress: '曼谷瓦他那县 Khlong Toei Nuea 10110',
+            address: '泰国 曼谷',
+            fullAddress: '',
             lineLabel: '添加 LINE 联系',
             telegramLabel: '通过 Telegram 联系',
             openHours: '每日开放',
