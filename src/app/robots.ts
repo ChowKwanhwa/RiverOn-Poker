@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://riveronpokerbangkok.com/sitemap.xml', // Placeholder URL
+    sitemap: 'https://riveronpokerbangkok.com/sitemap.xml',
   }
 }
