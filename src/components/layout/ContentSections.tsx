@@ -244,10 +244,6 @@ export function ContactSection() {
                                 <div className="w-10 h-10 rounded bg-[#00B900]/20 flex items-center justify-center text-[#00B900] group-hover:bg-[#00B900] group-hover:text-white transition-all font-bold text-xs ring-1 ring-[#00B900]/50">LINE</div>
                                 <span>{t.contact.lineLabel}</span>
                             </a>
-                            <a href="https://t.me/yangcha123" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
-                                <div className="w-10 h-10 rounded bg-[#0088cc]/20 flex items-center justify-center text-[#0088cc] group-hover:bg-[#0088cc] group-hover:text-white transition-all ring-1 ring-[#0088cc]/50"><Send size={18} /></div>
-                                <span>{t.contact.telegramLabel}</span>
-                            </a>
                             {/* New Social Links */}
                             <a href="https://instagram.com/riveronbangkok" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#E1306C]/20 flex items-center justify-center text-[#E1306C] group-hover:bg-[#E1306C] group-hover:text-white transition-all ring-1 ring-[#E1306C]/50"><Instagram size={18} /></div>
@@ -255,7 +251,7 @@ export function ContactSection() {
                             </a>
                             <a href="https://t.me/riveronbangkok" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#0088cc]/20 flex items-center justify-center text-[#0088cc] group-hover:bg-[#0088cc] group-hover:text-white transition-all ring-1 ring-[#0088cc]/50"><Send size={18} /></div>
-                                <span>Channel @riveronbangkok</span>
+                                <span>Telegram @riveronbangkok</span>
                             </a>
                             <a href="https://www.youtube.com/@riveronbangkok" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-zinc-400 hover:text-white transition-all hover:translate-x-1 group">
                                 <div className="w-10 h-10 rounded bg-[#FF0000]/20 flex items-center justify-center text-[#FF0000] group-hover:bg-[#FF0000] group-hover:text-white transition-all ring-1 ring-[#FF0000]/50"><Youtube size={18} /></div>

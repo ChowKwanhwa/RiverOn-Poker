@@ -38,7 +38,6 @@ export default function Home() {
       'closes': '08:00'
     },
     'sameAs': [
-      'https://t.me/yangcha123',
       'https://instagram.com/riveronbangkok',
       'https://t.me/riveronbangkok',
       'https://www.youtube.com/@riveronbangkok'
